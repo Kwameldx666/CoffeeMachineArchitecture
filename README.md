@@ -1,82 +1,34 @@
-Отлично, теперь у нас есть полный код для программы кофемашины. Я составлю `README.md` файл, который будет включать описание проекта, инструкции по установке и запуску, а также основные функции программы.
+---
 
-### `README.md`
+# Coffee Machine Simulator
 
-```markdown
-# Coffee Machine Simulation
+## Описание проекта
 
-This project is a simulation of a coffee machine, implemented in C#. The simulation includes functionalities for preparing various types of coffee, managing ingredient levels, and performing cleaning operations.
+Этот проект представляет собой симулятор кофемашины, которая позволяет пользователю управлять различными аспектами работы устройства, включая приготовление напитков, добавление ингредиентов и очистку системы.
 
-## Features
+## Функциональность
 
-- **Coffee Preparation:**
-  - Cappuccino
-  - Espresso
-  - Hot Chocolate
-  - Irish Coffee
-- **Ingredient Management:**
-  - Water tank management
-  - Milk tank management
-  - Coffee bean container management (regular coffee, chocolate, Irish coffee)
-- **System Maintenance:**
-  - Automatic and manual cleaning processes
-  - Monitoring of coffee waste and spilled liquids
+- **Добавление ингредиентов**: пользователь может добавлять молоко, воду, кофе и шоколадный порошок в соответствующие контейнеры.
+- **Приготовление напитков**: поддерживается приготовление капучино, эспрессо, горячего шоколада и ирландского кофе.
+- **Проверка уровней**: доступна возможность проверки уровня ингредиентов в контейнерах, а также уровня воды и молока.
+- **Очистка системы**: кофемашина автоматически выполняет промывку системы через определенные интервалы времени, а также позволяет пользователю вручную запустить процесс очистки.
 
-## Classes
+## Как использовать
 
-### 1. `CoffeeMachine`
-This class simulates the main coffee machine. It includes methods for warming up the machine and controlling the temperature. Once the machine is warmed up, it shows the main menu for user interaction.
+1. **Запуск меню**: при запуске программы откроется главное меню с различными опциями для управления кофемашиной.
+2. **Выбор опции**: вводите номер опции из меню, чтобы выполнить действие (например, добавить воду, приготовить капучино и т.д.).
+3. **Промывка системы**: если прошло достаточно времени с момента последней очистки, система автоматически выполнит промывку. Также вы можете запустить очистку вручную через меню.
 
-### 2. `MenuPanel`
-The main class for managing the user interface. It includes methods for adding ingredients, preparing drinks, checking levels, and performing cleaning tasks.
+## Системные требования
 
-### 3. `CompartmentSpilledLiquids`
-This class handles the management of spilled liquids within the machine. It allows for checking and resetting the liquid levels.
+- .NET 6.0 или выше
 
-### 4. `CoffeeWasteCompartment`
-This class manages the coffee waste produced by the machine. It allows for checking and clearing the waste compartment.
+## Инструкции по сборке и запуску
 
-### 5. `WaterTank`
-Handles the management of the water tank, including adding water and checking the water level.
+1. Клонируйте репозиторий на свой локальный компьютер.
+2. Откройте проект в Visual Studio или другом поддерживаемом редакторе.
+3. Постройте проект.
+4. Запустите исполняемый файл или используйте `dotnet run` в командной строке из каталога проекта.
 
-### 6. `MilkTank`
-Manages the milk tank with methods for adding milk and checking the milk level.
-
-### 7. `CoffeeBeanContainer` (Abstract Class)
-The base class for coffee bean containers, defining common properties and methods. Derived classes include:
-- `ContainerCoffee`
-- `ContainerChocolate`
-- `ContainerIrish`
-
-## Installation
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/Kwameldx666/coffeemachine-simulation.git
-   ```
-2. **Open the project in Visual Studio:**
-   - Open the `.sln` file in Visual Studio.
-
-3. **Build the project:**
-   - Ensure all dependencies are installed, and build the project.
-
-## Usage
-
-1. **Run the application:**
-   - Start the application. The machine will warm up before showing the main menu.
-
-2. **Interacting with the menu:**
-   - Use the numerical input to navigate through the options.
-   - Follow on-screen instructions for adding ingredients, preparing drinks, and performing maintenance.
-
-## Automatic Cleaning
-
-The system includes an automatic cleaning function that triggers after a set interval (defined by the `cleaningInterval` parameter in `MenuPanel`). Manual cleaning can also be initiated through the menu.
-
-## Notes
-
-- The simulation includes basic input validation to ensure the correct operation of the machine.
-- Make sure to monitor the ingredient levels before attempting to prepare any drinks.
-
-
+---
 
